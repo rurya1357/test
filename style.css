@@ -1,0 +1,265 @@
+/* font icon cdn */
+@import url("https: //fonts.googleapis.com/icon?family=Material+Icons");
+
+/* font family cdn */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* variables */
+:root {
+  /* object color */ 
+  --dark-black: #343434;
+  --blue: #233B86;
+}
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+img {
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+}
+
+/* ######################## Common CSS ######################## */
+body {
+  font-size: 18px;
+  background: url(img/background-img.png) no-repeat center;
+  background-size: cover;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #fff;
+}
+
+/* Layout CSS */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+.title img {
+  width: 70px;
+  margin-bottom: 5px;
+}
+.title h1 {
+  font-family: 'Paperlogy-8ExtraBold';
+  font-size: 70px;
+  letter-spacing: 3px;
+}
+.title span {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 9px;
+  margin-right: -6px;
+}
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+footer p {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ########## main page ########## */
+.lang-list {
+  width: 100%;
+}
+.lang-list a {
+  display: block;
+  width: 320px;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  background-color: var(--dark-black);
+  transition: 0.2s;
+}
+.lang-list a:hover {
+  background-color: var(--blue);
+}
+
+/* ########## catalog list page ########## */
+.container.catalog {
+  padding: 100px 0 140px;
+}
+.back-btn {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+}
+.back-btn span {
+  font-size: 50px;
+}
+.catalog-list {
+  width: 70%;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+.catalog-list table {
+  width: 100%;
+  counter-reset: number 0;
+}
+.catalog-list table tr {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.catalog-list table tr td {
+  height: 80px;
+  transition: 0.2s;
+}
+.catalog-list table tr:hover td {
+  color: var(--blue);
+}
+.catalog-list table tr td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+.catalog-list table tr td:first-child:before {
+  counter-increment: number 1;
+  content: counter(number)'.';
+  margin-right: 5px;
+}
+.catalog-list table tr td:last-child {
+  width: 60px;
+}
+.catalog-list .material-symbols-outlined {
+  margin-top: 5px;
+  font-size: 32px;
+}
+
+/* responsive for tablet */
+@media (max-width: 1024px) {
+  .container.catalog {
+    padding: 80px 80px 100px;
+  }
+  .back-btn {
+    top: 20px;
+    left: 20px;
+  }
+  .catalog-list {
+    width: 100%;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  .catalog-list table tr td:first-child span {
+    display: none;
+  }
+}
+/* responsive for tablet ~ mobile */
+@media (max-width: 768px) {
+  .title img {
+    width: 60px;
+    margin-bottom: 5px;
+  }
+  .title h1 {
+    font-size: 46px;
+  }
+  .title span {
+    font-size: 16px;
+    letter-spacing: 7px;
+  }
+  .lang-list a {
+    padding: 18px 0;
+  }
+  .container.catalog {
+    padding: 80px 30px 100px;
+  }
+}
+/* responsive for mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .title img {
+    width: 35px;
+    margin-bottom: 5px;
+  }
+  .title h1 {
+    font-size: 36px;
+  }
+  .title span {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
+  footer {
+    bottom: 10px;
+  }
+  footer p {
+    font-size: 9px;
+  }
+  .lang-list {
+    padding: 0 20px;
+  }
+  .lang-list a {
+    width: 100%;
+    max-width: 300px;
+  }
+  .container.catalog {
+    padding: 60px 0 70px;
+  }
+  .back-btn {
+    left: 10px;
+  }
+  .back-btn span {
+    font-size: 24px;
+  }
+  .catalog-list {
+    width: 85%;
+    padding: 0 5px;
+  }
+  .catalog-list table tr td {
+    height: 60px;
+  }
+  .catalog-list table tr td:last-child {
+    width: 40px;
+  }
+  .catalog-list .material-symbols-outlined {
+    margin-top: 2px;
+    font-size: 26px;
+  }
+  .catalog-list table tr td:first-child span {
+    display: none;
+  }
+}
