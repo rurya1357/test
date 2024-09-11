@@ -114,6 +114,11 @@ footer p {
   background-color: var(--blue);
 }
 
+/* ########## qrcode page ########## */
+.qr-code img {
+  width: 360px;
+}
+
 /* ########## catalog list page ########## */
 .container.catalog {
   padding: 100px 0 140px;
