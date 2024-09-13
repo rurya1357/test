@@ -115,11 +115,9 @@ footer p {
 }
 
 /* ########## qrcode page ########## */
-.qr-code {
-  border: 20px solid #fff;
-}
 .qr-code img {
   width: 360px;
+  border: 15px solid #fff;
 }
 
 /* ########## catalog list page ########## */
